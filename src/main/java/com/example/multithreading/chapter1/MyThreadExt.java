@@ -9,7 +9,9 @@ package com.example.multithreading.chapter1;
 public class MyThreadExt extends Thread {
     @Override
     public void run() {
+        int i = 0;
+        i++;
         super.run();
-        System.out.println("我是继承thread的方式实现多线程");
+        System.out.println("我是继承thread的方式实现多线程,"+"调用我的线程是："+Thread.currentThread().getName()+",i= "+i);
     }
 }
