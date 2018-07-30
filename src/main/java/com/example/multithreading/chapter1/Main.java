@@ -1,5 +1,12 @@
 package com.example.multithreading.chapter1;
 
+import java.io.BufferedReader;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Random;
+import java.util.stream.Stream;
+
 /**
  * Created by miaodongbiao
  * Date:2018/7/19-23:20
@@ -40,6 +47,7 @@ public class Main {
         thread.start();
         Thread thread1 = new Thread(myThread);
         thread1.start();
+        thread.stop();
     }
 
     /**
@@ -57,6 +65,8 @@ public class Main {
         MyThreadImpl2 myThread = new MyThreadImpl2();
         for(int i = 0;i<100;i++){
             new Thread(myThread).start();
+
+
         }
     }
 
